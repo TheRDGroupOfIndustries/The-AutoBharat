@@ -72,15 +72,15 @@ export function AppSidebar({ isOpen, setIsOpen }: AppSidebarProps) {
             animate={{ clipPath: "circle(200% at 48px 48px)" }}
             exit={{ clipPath: "circle(0px at 48px 48px)" }}
             transition={{ type: "tween", duration: 1.0, ease: [0.7, 0, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-white text-black flex flex-col pt-32 px-12 sm:px-24"
+            className="fixed inset-0 z-40 bg-white text-black flex flex-col pt-24 lg:pt-32 px-6 sm:px-12 lg:px-24 overflow-y-auto overflow-x-hidden"
           >
-            <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 max-w-7xl mx-auto w-full flex-1 lg:items-center mt-12 lg:mt-0">
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-32 max-w-7xl mx-auto w-full flex-1 lg:items-center mt-6 lg:mt-0 pb-12 lg:pb-0">
 
               {/* Left Side: Giant Bold Static Text */}
               <div className="flex flex-col gap-2 lg:gap-4 flex-1">
                 {decorativeTexts.map((text, i) => (
                   <motion.div key={text} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 + i * 0.05 }}>
-                    <p className={`inline-block py-2 text-display text-5xl sm:text-7xl lg:text-8xl xl:text-[7rem] leading-none tracking-tight font-bold text-black`}>
+                    <p className={`inline-block py-1 sm:py-2 text-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] leading-none tracking-tight font-bold text-black`}>
                       {text}
                     </p>
                   </motion.div>
