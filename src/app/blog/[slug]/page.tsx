@@ -3,15 +3,16 @@ import prisma from '@/lib/prisma';
 import BlogClient from './BlogClient';
 
 type Props = {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 };
 
 export async function generateMetadata(
     { params }: Props
 ): Promise<Metadata> {
+    const resolvedParams = await params;
     // fetch data
     const post = await prisma.post.findUnique({
-        where: { slug: params.slug },
+        where: { slug: resolvedParams.slug },
     });
 
     if (!post) {
