@@ -3,10 +3,7 @@ import { Providers } from "./providers";
 import { GlobalLayout } from "@/components/GlobalLayout";
 
 export const metadata = {
-    title: {
-        template: '%s | The AutoBharat',
-        default: 'The AutoBharat',
-    },
+    title: "The AutoBharat",
     description: "The AutoBharat is your premier destination for the latest automotive news, reviews, and insights in India.",
     keywords: ["automotive news", "car reviews", "India cars", "AutoBharat", "bikes", "auto industry"],
     openGraph: {

@@ -16,12 +16,12 @@ export async function generateMetadata(
 
     if (!post) {
         return {
-            title: 'Post Not Found',
+            title: 'The AutoBharat',
         };
     }
 
     return {
-        title: post.meta_title || post.title,
+        title: "The AutoBharat",
         description: post.meta_description || post.excerpt,
         keywords: post.meta_keywords || undefined,
         openGraph: {
