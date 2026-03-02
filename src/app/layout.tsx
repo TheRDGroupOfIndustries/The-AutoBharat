@@ -3,8 +3,24 @@ import { Providers } from "./providers";
 import { GlobalLayout } from "@/components/GlobalLayout";
 
 export const metadata = {
-    title: "The AutoBharat",
-    description: "The AutoBharat Frontend",
+    title: {
+        template: '%s | The AutoBharat',
+        default: 'The AutoBharat',
+    },
+    description: "The AutoBharat is your premier destination for the latest automotive news, reviews, and insights in India.",
+    keywords: ["automotive news", "car reviews", "India cars", "AutoBharat", "bikes", "auto industry"],
+    openGraph: {
+        title: "The AutoBharat",
+        description: "The AutoBharat is your premier destination for the latest automotive news, reviews, and insights in India.",
+        url: "https://the-auto-bharat.vercel.app",
+        siteName: "The AutoBharat",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "The AutoBharat",
+        description: "The AutoBharat is your premier destination for the latest automotive news, reviews, and insights in India.",
+    },
 };
 
 export const dynamic = 'force-dynamic';
